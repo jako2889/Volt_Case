@@ -1,0 +1,43 @@
+@import "colors";
+@import "fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  background-color: $headerColor;
+  display: grid;
+  grid-template-columns: 1fr minmax(100px, 1000px) 1fr;
+  grid-template-areas: ". nav .";
+
+  nav {
+    grid-area: nav;
+    border: 1px solid green;
+    display: flex;
+  }
+  ul {
+    display: flex;
+
+    li {
+      list-style: none;
+      margin: 0px 10px;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-family: proxima-nova, sans-serif;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
