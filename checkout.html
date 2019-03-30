@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>VOLT - CHECKOUT PAGE</title>
+    <link rel="stylesheet" href="style/_register.scss">
   </head>
   <body>
-    <div class="test_jakob"></div>
+
+      <form id="register_con">
+        <h1>Basic Information</h1>
+        <div class="name_con">
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
+
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" id="lastname" placeholder="Lastname" required>
+        </div>
+
+        <label for="mail">E-mail</label>
+        <input type="email" id="mail" name="mail" placeholder="name@example.com" required>
+
+        <label for="phone">Phone number</label>
+        <input type="tel" name="phone" id="phone" placeholder="12 34 56 78" required>
+
+        <label for="country">Country</label>
+        <input type='text' name="country" id="country" required>
+
+        <input type="submit" id="submitBtn" value="Next">
+      </form>
+
     <script src="javascript/checkout.js"></script>
   </body>
 </html>
