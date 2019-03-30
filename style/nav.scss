@@ -8,6 +8,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f0f0f0;
 }
 
 img {
@@ -19,24 +20,112 @@ header {
   display: grid;
   grid-template-columns: 1fr minmax(100px, 1000px) 1fr;
   grid-template-areas: ". nav .";
+  height: 50px;
 
   nav {
     grid-area: nav;
-    border: 1px solid green;
-    display: flex;
-  }
-  ul {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5fr minmax(1px, 1fr) 1.5fr;
+    grid-template-rows: 5px 1fr 5px;
+    grid-template-areas:
+      ". . ."
+      "link . opt"
+      ". . .";
 
-    li {
-      list-style: none;
-      margin: 0px 10px;
+    .options_con {
+      grid-area: opt;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap: 20px;
 
-      a {
-        text-decoration: none;
-        color: white;
-        font-family: proxima-nova, sans-serif;
+      & > * {
+      }
+
+      .flag_image {
+        width: 25px;
+        height: 25px;
+        background-image: url(../images/brit_flag.png);
+        background-size: 100% 100%;
+      }
+
+      .flag_symbol {
+        width: 10px;
+        height: 25px;
+        margin-left: 5px;
+        background-image: url(../images/arrow-down.svg);
+        background-size: 100% 100%;
+      }
+
+      .cart_image {
+        width: 20px;
+        height: 20px;
+        background-image: url(../images/icon-cart.svg);
+        background-repeat: no-repeat;
+      }
+      .cart_amount {
+        font-size: 12px;
+        align-self: flex-end;
+      }
+
+      div {
+        display: flex;
+        div {
+          align-self: center;
+          color: white;
+          font-family: proxima-nova, sans-serif;
+          text-transform: capitalize;
+          text-align: center;
+          display: flex;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .sign_up {
+        background: $mainGreen;
+        padding: 8px;
+        white-space: nowrap;
+        border-radius: 5%;
         text-transform: uppercase;
+        margin-right: 10px;
+      }
+    }
+    ul {
+      grid-area: link;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 10px;
+      margin: 0px;
+      padding: 0px;
+      justify-content: baseline;
+
+      li:first-child {
+        width: 74px;
+      }
+      li {
+        list-style: none;
+        display: flex;
+        margin: 0px 10px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .logo_con {
+          align-self: center;
+          width: 100%;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-family: proxima-nova, sans-serif;
+          text-transform: capitalize;
+          text-align: center;
+          vertical-align: bottom;
+          align-self: center;
+          font-size: 15px;
+        }
       }
     }
   }
