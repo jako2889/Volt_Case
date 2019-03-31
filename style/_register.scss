@@ -12,7 +12,7 @@
     grid-area: register;
     display: grid;
     grid-template-columns: auto auto;
-    grid-gap: 3%;
+    grid-gap: 5%;
 
 }
 .summary_con {
@@ -60,14 +60,15 @@
 }
 
 #register_con {
-    width: 43vw;
-    height: 82vh;
+    width: 100%;
+    height: 100%;
 
     background: $formColor;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 
     display: grid;
+    padding: 2%;
 
     h1{
         font-family: $ProximaBold;
@@ -78,14 +79,14 @@
     label {
         display: block;
         font-family: $ProximaRegular;
-        margin-left: 1em;
+        margin: 3% 0 0 3%;
     }
     input {
         background: $inputColor;
         border-radius: 5px;
         border: none;
 
-        margin-left: 1em;
+        margin-left: 3%;
     }
     input::placeholder {
         padding-left: 10px;
@@ -109,6 +110,7 @@
         }
         label:nth-child(1){
             display: grid;
+            margin-left: 6%;
         }
         label:nth-child(2){
             display: grid;
@@ -155,4 +157,60 @@
         margin-left: 0.5em;
     }
 
+}
+
+.progress_wrapper {
+
+    display: grid;
+    grid-template-columns: 1fr minmax(100px, 1000px) 1fr;
+    grid-template-areas: ". bar .";
+
+.progress_container {
+    grid-area: bar;
+
+    width: 100%;
+    height: 10vw;
+
+    .progress_bar {
+        counter-reset: step;
+
+        li {
+            list-style-type: none;
+            float: left;
+            width: 50%;
+            position: relative;
+            text-align: center;
+            font-family: $ProximaBold;
+        }
+        li:before{
+            content: counter(step);
+            counter-increment: step;
+
+            width: 50px;
+            height: 50px;
+            line-height: 215%;
+            background: $mainGreen;
+            font-family: $ProximaBold;
+            color: #FFFFFF;
+            font-size: 1.5em;
+            border: 2px solid $mainGreen;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+        }
+        li:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: $mainGreen;
+            top: 25px;
+            left: -50%;
+            z-index: -1;
+        }
+        li:first-child:after {
+            content: none;
+        }
+    }
+}
 }
