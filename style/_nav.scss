@@ -21,6 +21,8 @@ header {
   grid-template-columns: 1fr minmax(100px, 1000px) 1fr;
   grid-template-areas: ". nav .";
   height: 50px;
+  position: fixed;
+  width: 100vw;
 
   nav {
     grid-area: nav;
