@@ -64,8 +64,8 @@ $borderRadius: 5px;
 
 }
 
-// REGISTER FORM
-#register_con {
+// PAYMENT FORM
+#payment_con {
     width: 100%;
     height: 100%;
 
@@ -76,10 +76,121 @@ $borderRadius: 5px;
     display: grid;
     padding: 2%;
 
+    border-bottom: 3px solid rgba(128, 128, 128, 0.171);
+    padding-bottom: 10px;
+
     h1{
         font-family: $ProximaBold;
         border-bottom: 3px solid $greyColor;
         margin-right: 5%;
+        text-transform: uppercase;
+        font-size: 1.2em;
+    }
+    h1:last-of-type {
+        font-family: $ProximaBold;
+        border-bottom: none;
+        font-size: 1.2em;
+    }
+
+    label {
+        display: block;
+        font-family: $ProximaRegular;
+        margin: 3% 0 0 3%;
+    }
+    input {
+        background: $inputColor;
+        border-radius: 5px;
+        border: none;
+
+        margin-left: 3%;
+    }
+    input::placeholder {
+        padding-left: 10px;
+    }
+
+    .Card_con {
+
+        display: flex;
+        flex-direction: row;
+
+        border-bottom: 3px solid rgba(128, 128, 128, 0.171);
+        padding-bottom: 10px;
+
+        label {
+            cursor: pointer;
+        }
+
+        input {
+        display: none;
+        }
+        span {
+            display: block;
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            background: $greyColor;
+
+            text-align: center;
+            line-height: 300%;
+            color: #FFFFFF;
+            font-family: $ProximaRegular;
+            font-weight: 400;
+
+            &:hover {
+                background: darken($greyColor, 10%);
+            }
+
+        }
+        input:checked ~ span {
+            background: $mainGreen;
+        }
+    }
+
+    #submitBtn {
+        font-family: $ProximaBold;
+        font-weight: 700;
+        width: 202px;
+        height: 45px;
+        background: $mainGreen;
+        color: $buttonTextColor;
+        font-size: 24px;
+        line-height: normal;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+
+        justify-self: center;
+        margin: 5%;
+
+        &:hover {
+            background: darken($mainGreen, 10%);
+        }
+    }
+    
+    
+}
+
+// REGISTER FORM
+#register_con {
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    background: $formColor;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+
+    //display: grid;
+    padding: 2%;
+
+    h1{
+        font-family: $ProximaBold;
+        border-bottom: 3px solid $greyColor;
+        margin-right: 5%;
+        text-transform: uppercase;
     }
 
     label {
@@ -204,6 +315,7 @@ $borderRadius: 5px;
             display: block;
             text-align: center;
             margin: 0 auto 10px auto;
+            border-radius: 5px;
         }
         li:after {
             content: "";
@@ -217,6 +329,10 @@ $borderRadius: 5px;
         }
         li:first-child:after {
             content: none;
+        }
+        li:last-child:before {
+            background: $greyColor;
+            border-color: $greyColor;
         }
     }
 }
