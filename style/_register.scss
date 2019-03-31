@@ -1,35 +1,117 @@
 @import "colors";
+@import "fonts";
 
+.register_wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(100px, 1000px) auto 1fr;
+    justify-items: center;
+
+    grid-template-areas: ". register .";
+}
+.register_container {
+    grid-area: register;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 3%;
+
+}
+.summary_con {
+    width: 345px;
+    height: 370px;
+    background: $formColor;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: repeat(3, 1fr) 1fr;
+    grid-template-areas: 
+    "title title title"
+    "type . price"
+    "total . total2"
+    ". . .";
+
+    & > p {
+        margin-left: 3%;
+        font-family: $ProximaRegular;
+    }
+
+    h1 {
+        grid-area: title;
+        margin-left: 2%;
+        border-bottom: 3px solid $greyColor;
+        margin-bottom: 5%;
+        margin-right: 5%;
+        font-family: $ProximaBold;
+    }
+    .type {
+        grid-area: type;
+    }
+    .price {
+        grid-area: price;
+    }
+    .total {
+        grid-area: total;
+    }
+    .total2 {
+        grid-area: total2;
+    }
+
+}
 
 #register_con {
-    position: absolute;
     width: 43vw;
     height: 82vh;
-    left: 243px;
-    top: 275px;
 
     background: $formColor;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 
+    display: grid;
+
+    h1{
+        font-family: $ProximaBold;
+        border-bottom: 3px solid $greyColor;
+        margin-right: 5%;
+    }
+
     label {
         display: block;
+        font-family: $ProximaRegular;
+        margin-left: 1em;
     }
     input {
         background: $inputColor;
         border-radius: 5px;
         border: none;
+
+        margin-left: 1em;
+    }
+    input::placeholder {
+        padding-left: 10px;
     }
 
     .name_con {
+        display: grid;
+        grid-template-columns: 50% 50%;
 
         #firstname {
             width: 249px;
             height: 52px;
+
+            margin-left: 0;
         }
         #lastname {
             width: 249px;
             height: 52px;
+
+            margin-left: 0;
+        }
+        label:nth-child(1){
+            display: grid;
+        }
+        label:nth-child(2){
+            display: grid;
         }
     }
     #mail {
@@ -45,25 +127,32 @@
         height: 52px;
     }
     #submitBtn {
+        font-family: $ProximaBold;
+        font-weight: 700;
         width: 202px;
         height: 45px;
         background: $mainGreen;
         color: $buttonTextColor;
-        font-family: sans-serif;
-        font-style: normal;
-        font-weight: 900;
         font-size: 24px;
         line-height: normal;
         letter-spacing: 0.05em;
+        text-transform: uppercase;
 
 
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         cursor: pointer;
 
+        justify-self: center;
+        margin: 5%;
+
         &:hover {
             background: darken($mainGreen, 10%);
         }
         
+    }
+
+    h1 {
+        margin-left: 0.5em;
     }
 
 }
