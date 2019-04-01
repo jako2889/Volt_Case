@@ -55,7 +55,15 @@
 
     <div class="site_content_wrapper">
       <div class="site_content_container">
-        <div class="cart_con col_1"></div>
+        <div class="cart_con col_1">
+          <div class="cart_head_con">
+            <div class="cart_symbol"></div>
+            <div class="cart_t">
+              CART (<span class="cart_items_totalt_amount">3</span>items)
+            </div>
+          </div>
+          <div class="items_conwrap" id="output"></div>
+        </div>
         <div class="col_2">
           <div class="total_price_con row_1">
             <div class="total_head">Total price</div>
@@ -74,7 +82,7 @@
               <div class="total_numb">429 DKK</div>
             </div>
             <div class="but_con">
-              <button>GO TO PEYMENT</button>
+              <button>GO TO PYMENT</button>
             </div>
           </div>
           <div class="promo_con row_2">
@@ -93,7 +101,88 @@
       </div>
     </div>
 
-    <div class="test">JEG HEDDER MAU</div>
+    <!-- INFO HOVER MODAL -->
+
+    <div class="modal_hover_wrap">
+      <div class="modal_close">Close</div>
+      <div class="modal_con">
+        <div class="modal_text_con">
+          <div class="modal_title">Volt Powerbank Deposit</div>
+          <div class="modal_txt">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+        <div class="modal_image_con">
+          <img class="modal_img" src="images/_DSC7799-HDR.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <template id="target">
+      <!-- OUTPUT HERE -->
+      <!-- ----------------- -->
+      <article class="prod_wrap">
+        <!--  -->
+        <div class="left_c">
+          <div class="details_wrap">
+            <div class="d_img_con">
+              <div class="d_img"></div>
+            </div>
+            <div class="txt_con">
+              <div class="prod_title">Swap & Go Service</div>
+              <div class="fest">Roskilde Festival</div>
+              <div class="rm_con">
+                <div class="rm_icon"></div>
+                <div class="rm">Remove item</div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="help_con">
+            <div class="help_icon"></div>
+            <div class="help_txt">Need information?</div>
+          </div>
+        </div>
+        <div class="right_c">
+          <!--  -->
+          <div class="form_con">
+            <form class="product" action="">
+              <input
+                class="prod_item"
+                type="number"
+                name="quantity"
+                min="1"
+                max="5"
+                value="1"
+              />
+
+              <label class="delv_opt" for="delivery">
+                <div class="delv_txt">DELIVERY OPTIONS</div>
+                <select id="delivery">
+                  <option value="pick_up">Pick up at Festival - Free</option>
+                  <option value="Ship">Ship to home + 50 DKK</option>
+                  <option value="myVolt">Bringing my own volt-Powerbank</option>
+                </select>
+              </label>
+            </form>
+          </div>
+
+          <div class="price_con">
+            <div class="disc_p">175 DKK</div>
+            <div class="org_p">200 DKK</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- HERERE-->
+      <!-- ------------------- -->
+    </template>
     <script src="javascript/main.js"></script>
   </body>
 </html>

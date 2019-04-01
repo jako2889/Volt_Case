@@ -27,9 +27,16 @@ $borderRadius: 5px;
       grid-area: a;
       background-color: white;
       height: 650px;
+      padding: 20px;
 
       box-shadow: $boxShadow;
       border-radius: $borderRadius;
+
+      .cart_head_con {
+        margin: 0px 0px 30px 0px;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 10px;
+      }
     }
     .col_2 {
       grid-area: b;
@@ -142,4 +149,188 @@ $borderRadius: 5px;
     // .promo_con {
     // }
   }
+}
+
+.prod_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0px 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  .left_c {
+  }
+  .right_c {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    & > * {
+    }
+
+    .price_con {
+      align-self: flex-end;
+
+      display: flex;
+      .disc_p {
+        color: $mainGreen;
+        font-size: 1.6em;
+      }
+      .org_p {
+        margin-left: 10px;
+        font-size: 1.6em;
+        text-decoration: line-through;
+        color: grey;
+      }
+    }
+  }
+}
+
+.prod_wrap {
+  .details_wrap {
+    display: flex;
+    .d_img_con {
+      padding: 2px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      .d_img {
+        background-image: url(../images/Volt-Charger.png);
+        width: 80px;
+        height: 80px;
+        background-size: 100% 100%;
+      }
+    }
+    .txt_con {
+      margin-left: 10px;
+
+      .prod_title {
+        font-weight: 300;
+        font-size: 1.2em;
+      }
+      .fest {
+        font-size: 0.8em;
+        color: grey;
+      }
+      .rm_con {
+        display: flex;
+        margin-top: 10px;
+        & > * {
+        }
+        .rm_icon {
+          background-image: url(../images/trash.svg);
+          width: 15px;
+          height: 15px;
+          background-size: 100% 100%;
+        }
+        .rm {
+          color: #72b3ff;
+          text-decoration: underline;
+          font-size: 0.6em;
+          margin-left: 4px;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+  .help_con {
+    display: flex;
+    padding: 10px;
+    .help_icon {
+      background-image: url(../images/quest.svg);
+      height: 20px;
+      width: 20px;
+      background-size: 100% 100%;
+      cursor: pointer;
+    }
+    .help_txt {
+      align-self: flex-end;
+      color: grey;
+      font-size: 0.7em;
+      margin-left: 5px;
+    }
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  opacity: 1;
+}
+
+.product {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  .prod_item {
+    width: 70px;
+    height: 30px;
+    font-size: 1em;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    align-self: flex-end;
+  }
+  .delv_opt {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    .delv_txt {
+      font-size: 0.6em;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      padding-left: 5px;
+    }
+    #delivery {
+      width: 200px;
+      height: 30px;
+      align-self: flex-end;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background-color: white;
+      border-radius: 5px;
+    }
+  }
+}
+
+// MODAL
+
+// .help_icon:hover ~ .modal_hover_wrap {
+//   background: rgb(134, 18, 18);
+// }
+
+.modal_hover_wrap {
+  width: 400px;
+  font-family: proxima-nova, sans-serif;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: $boxShadow;
+  position: absolute;
+  left: 500px;
+  top: 90px;
+  z-index: 2;
+  display: none;
+  .modal_con {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    .modal_text_con {
+      padding: 20px;
+      & > * {
+        margin: 10px 0px;
+      }
+      .modal_title {
+        font-weight: 600;
+      }
+      .modal_txt {
+        font-size: 0.9em;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+.modal_close {
+  cursor: pointer;
+}
+
+.rm_con {
+  cursor: pointer;
 }
