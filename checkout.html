@@ -63,9 +63,43 @@
                   </label>
             </div>
             <h1>Card information</h1>
+            <label for="cardnumber">Card Number *</label>
+            <input type="text" id="cardnumber" name="cardnumber" placeholder="name@example.com" required>
+            <div class="expiry_con">
+                <label for="expireMM">Expiry Date *
+                <select name='expireMM' id='expireMM'>
+                    <option value=''>Month</option>
+                    <option value='01'>January</option>
+                    <option value='02'>February</option>
+                    <option value='03'>March</option>
+                    <option value='04'>April</option>
+                    <option value='05'>May</option>
+                    <option value='06'>June</option>
+                    <option value='07'>July</option>
+                    <option value='08'>August</option>
+                    <option value='09'>September</option>
+                    <option value='10'>October</option>
+                    <option value='11'>November</option>
+                    <option value='12'>December</option>
+                </select> 
+              </label>
+              <label for="expireYY">
+                <select name='expireYY' id='expireYY'>
+                    <option class="year" value=''>Year</option>
+                    <option value='10'>2010</option>
+                    <option value='11'>2011</option>
+                    <option value='12'>2012</option>
+                </select> 
+              </label>
+                <input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4"/>
+            </div>
 
+            <label for="cvc">CVC *</label>
+              <input type="text" name="cvc" id="cvc" placeholder="CVC">
+              <p>Need information</p>
+            
     
-            <input type="submit" id="submitBtn" value="Next">
+            <input type="submit" id="submitBtn" value="Confirm">
           </form>
 
           <div class="total_price_con row_1">
