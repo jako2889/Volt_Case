@@ -11,6 +11,7 @@ $borderRadius: 5px;
     justify-items: center;
 
     grid-template-areas: ". register .";
+    margin-bottom: 5%;
 }
 .register_container {
     grid-area: register;
@@ -410,6 +411,12 @@ $borderRadius: 5px;
     #phone {
         width: 364px;
         height: 52px;
+    }
+    #phone:before {
+        content: "+45";
+        background: $mainGreen;
+        display: inline-block;
+        padding: 10px;
     }
     #country {
         width: 370px;
