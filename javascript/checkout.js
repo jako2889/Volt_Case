@@ -52,6 +52,7 @@ const paymentform = document.querySelector("#payment_con");
     // Display Payment site & un display register
     registerform.style.display = "none";
     paymentform.style.display = "grid";
+    document.querySelector(".second_bar").classList.add("color_progress");
    
    });
 

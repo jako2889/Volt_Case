@@ -197,9 +197,6 @@ $borderRadius: 5px;
 
         margin-left: 3%;
     }
-    input::placeholder {
-        padding-left: 10px;
-    }
 
     .Card_con {
 
@@ -274,7 +271,8 @@ $borderRadius: 5px;
         border: none;
         cursor: pointer;
         padding-left: 10px;
-    }
+    
+}
 
     input {
         background: $inputColor;
@@ -283,6 +281,19 @@ $borderRadius: 5px;
 
         margin-left: 3%;
         padding-left: 10px;
+ 
+     // If invalid
+    &:invalid:not(:focus):not(:placeholder-shown) {
+        border: 3px solid $alertRed;
+        border-radius: 5px;
+    }  
+}
+
+    input:valid {
+        border: 3px solid $mainGreen;
+        border-radius: 5px;
+        outline: none;
+        
     }
 
     .expiry_con {
@@ -368,6 +379,11 @@ $borderRadius: 5px;
         font-family: $ProximaRegular;
         margin: 3% 0 0 3%;
     }
+
+    .requirements {
+        display: none;
+    }
+
     input {
         background: $inputColor;
         border-radius: 5px;
@@ -375,6 +391,26 @@ $borderRadius: 5px;
 
         margin-left: 3%;
         padding-left: 10px;
+
+        // If invalid
+        &:invalid:not(:focus):not(:placeholder-shown) {
+            border: 3px solid $alertRed;
+            border-radius: 5px;
+          }  
+          &:invalid:focus:not(:placeholder-shown) {
+            & ~ .requirements {
+              padding: 0 0 0 3%;
+              color: $alertRed;
+              font-family: $ProximaRegular;
+              display: initial;
+            }
+          }
+    }
+    input:valid {
+        border: 3px solid $mainGreen;
+        border-radius: 5px;
+        outline: none;
+
     }
 
     .name_con {
@@ -564,6 +600,12 @@ $borderRadius: 5px;
             background: $greyColor;
             border-color: $greyColor;
         }
+        // FOR WHEN PAYMENT IS VISIBLE ADD COLOR_PROGRESS CLASS
+        li.color_progress:before{
+            background: $mainGreen;
+            border-color: $mainGreen;
+        }
+
     }
 }
 }
