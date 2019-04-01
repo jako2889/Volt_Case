@@ -22,11 +22,12 @@ $borderRadius: 5px;
 
 // SUMMARY BOX 2.0
 .row_1 {
-    height: 50%;
-    width: 250px;
+    height: 55%;
+    width: 260px;
     background-color: white;
     box-shadow: $boxShadow;
     border-radius: $borderRadius;
+    font-family: $ProximaRegular;
 
     padding: 20px;
     display: flex;
@@ -60,6 +61,83 @@ $borderRadius: 5px;
         .total_numb {
           border-bottom: 1px solid rgb(128, 128, 128);
         }
+      }
+      .details {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 20px 0px;
+
+        & > div {
+            padding-bottom: 3%;
+        }
+
+        .detail_head {
+            text-transform: uppercase;
+            font-weight: 600;
+            padding-bottom: 10px;
+        }
+
+        .detail_name_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .detail_name_text {
+                color: $greyColor;
+            }
+        }
+        .detail_email_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .detail_email_text {
+                color: $greyColor;
+            }
+        }
+        .detail_phone_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .detail_phone_text {
+                color: $greyColor;
+            }
+        }
+        .detail_shipping {
+            text-transform: uppercase;
+            font-weight: 600;
+            padding-bottom: 10px;
+        }
+        .shipping_address_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .shipping_address_text {
+                color: $greyColor;
+            }
+        }
+        .shipping_city_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .shipping_city_text {
+                color: $greyColor;
+            }
+        }
+        .shipping_country_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .shipping_country_text {
+                color: $greyColor;
+            }
+        }
+        
       }
 
 }
