@@ -22,7 +22,7 @@ $borderRadius: 5px;
 
 // SUMMARY BOX 2.0
 .row_1 {
-    height: 55%;
+    height: 80%;
     width: 260px;
     background-color: white;
     box-shadow: $boxShadow;
@@ -58,6 +58,10 @@ $borderRadius: 5px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        border-bottom: 3px solid rgba(128, 128, 128, 0.171);
+        padding-bottom: 15px;
+
         .total_numb {
           border-bottom: 1px solid rgb(128, 128, 128);
         }
@@ -105,10 +109,20 @@ $borderRadius: 5px;
                 color: $greyColor;
             }
         }
+        .detail_country_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .detail_country_text {
+                color: $greyColor;
+            }
+        }
+
         .detail_shipping {
             text-transform: uppercase;
             font-weight: 600;
-            padding-bottom: 10px;
+            padding: 10px 0 10px 0;
         }
         .shipping_address_con {
             display: flex;
@@ -151,7 +165,7 @@ $borderRadius: 5px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 
-    display: grid;
+    display: none;
     padding: 2%;
 
 
@@ -296,9 +310,6 @@ $borderRadius: 5px;
         label:nth-child(1) {
             width: 45%;
         }
-        select:nth-child(2){
-
-        }
     }
     #cardnumber {
         width: 527px;
@@ -333,7 +344,7 @@ $borderRadius: 5px;
 
 // REGISTER FORM
 #register_con {
-    display: none;
+    display: grid;
     width: 100%;
     height: 100%;
 
@@ -341,7 +352,6 @@ $borderRadius: 5px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 
-    //display: grid;
     padding: 2%;
 
     h1{
@@ -432,6 +442,55 @@ $borderRadius: 5px;
 
     h1 {
         margin-left: 0.5em;
+    }
+    h1:last-of-type {
+        color: $greyColor;
+    }
+    .address_con {
+        display: flex;
+        flex-direction: row;
+
+        #address {
+            width: 350px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        #zip_code {
+            width: 150px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        label:nth-child(1){
+            display: grid;
+        }
+        label:nth-child(2){
+            display: grid;
+        }
+    }
+    .city_con {
+        display: flex;
+        flex-direction: row;
+
+        #city {
+            width: 250px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        #country {
+            width: 250px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        label:nth-child(1){
+            display: grid;
+        }
+        label:nth-child(2){
+            display: grid;
+        }
     }
 
 }
