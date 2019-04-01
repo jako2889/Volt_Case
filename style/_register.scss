@@ -273,7 +273,7 @@ $borderRadius: 5px;
         border-radius: 5px;
         border: none;
         cursor: pointer;
-
+        padding-left: 10px;
     }
 
     input {
@@ -282,8 +282,6 @@ $borderRadius: 5px;
         border: none;
 
         margin-left: 3%;
-    }
-    input::placeholder {
         padding-left: 10px;
     }
 
@@ -376,8 +374,6 @@ $borderRadius: 5px;
         border: none;
 
         margin-left: 3%;
-    }
-    input::placeholder {
         padding-left: 10px;
     }
 
