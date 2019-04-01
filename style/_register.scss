@@ -1,0 +1,565 @@
+@import "colors";
+@import "fonts";
+
+// VARIABLES
+$boxShadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
+$borderRadius: 5px;
+
+.register_wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(100px, 1000px) 1fr;
+    justify-items: center;
+
+    grid-template-areas: ". register .";
+    margin-bottom: 5%;
+}
+.register_container {
+    grid-area: register;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 5%;
+
+}
+
+// SUMMARY BOX 2.0
+.row_1 {
+    height: 80%;
+    width: 260px;
+    background-color: white;
+    box-shadow: $boxShadow;
+    border-radius: $borderRadius;
+    font-family: $ProximaRegular;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+      .total_head {
+        text-transform: uppercase;
+        font-weight: 600;
+        border-bottom: 3px solid rgba(128, 128, 128, 0.171);
+        padding-bottom: 10px;
+      }
+
+      .calc_con {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 20px 0px;
+        div:last-child {
+          text-align: right;
+        }
+        & > div {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+      .total_con {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        border-bottom: 3px solid rgba(128, 128, 128, 0.171);
+        padding-bottom: 15px;
+
+        .total_numb {
+          border-bottom: 1px solid rgb(128, 128, 128);
+        }
+      }
+      .details {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 20px 0px;
+
+        & > div {
+            padding-bottom: 3%;
+        }
+
+        .detail_head {
+            text-transform: uppercase;
+            font-weight: 600;
+            padding-bottom: 10px;
+        }
+
+        .detail_name_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .detail_name_text {
+                color: $greyColor;
+            }
+        }
+        .detail_email_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .detail_email_text {
+                color: $greyColor;
+            }
+        }
+        .detail_phone_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .detail_phone_text {
+                color: $greyColor;
+            }
+        }
+        .detail_country_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .detail_country_text {
+                color: $greyColor;
+            }
+        }
+
+        .detail_shipping {
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 10px 0 10px 0;
+        }
+        .shipping_address_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .shipping_address_text {
+                color: $greyColor;
+            }
+        }
+        .shipping_city_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .shipping_city_text {
+                color: $greyColor;
+            }
+        }
+        .shipping_country_con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .shipping_country_text {
+                color: $greyColor;
+            }
+        }
+        
+      }
+
+}
+
+// PAYMENT FORM
+#payment_con {
+    width: 100%;
+    height: 100%;
+
+    background: $formColor;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+
+    display: none;
+    padding: 2%;
+
+
+
+    h1{
+        font-family: $ProximaBold;
+        border-bottom: 3px solid rgba(128, 128, 128, 0.171);
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        font-size: 1.2em;
+    }
+    h1:last-of-type {
+        font-family: $ProximaBold;
+        border-bottom: none;
+        font-size: 1.2em;
+    }
+
+    label {
+        display: block;
+        font-family: $ProximaRegular;
+        margin: 3% 0 0 3%;
+    }
+    input {
+        background: $inputColor;
+        border-radius: 5px;
+        border: none;
+
+        margin-left: 3%;
+    }
+    input::placeholder {
+        padding-left: 10px;
+    }
+
+    .Card_con {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        border-bottom: 3px solid rgba(128, 128, 128, 0.171);
+        padding-bottom: 20px;
+
+        label {
+            cursor: pointer;
+        }
+
+        input {
+        display: none;
+        }
+        span {
+            display: block;
+            width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            background: $greyColor;
+
+            text-align: center;
+            line-height: 300%;
+            color: #FFFFFF;
+            font-family: $ProximaRegular;
+            font-weight: 400;
+
+            &:hover {
+                background: darken($greyColor, 10%);
+            }
+
+        }
+        input:checked ~ span {
+            background: $mainGreen;
+        }
+    }
+
+    #submitBtn {
+        font-family: $ProximaBold;
+        font-weight: 700;
+        width: 202px;
+        height: 45px;
+        background: $mainGreen;
+        color: $buttonTextColor;
+        font-size: 24px;
+        line-height: normal;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+
+        justify-self: center;
+        margin: 5%;
+
+        &:hover {
+            background: darken($mainGreen, 10%);
+        }
+    }
+    label {
+        display: block;
+        font-family: $ProximaRegular;
+        margin: 3% 0 0 3%;
+    }
+    select {
+        background: $inputColor;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+
+    }
+
+    input {
+        background: $inputColor;
+        border-radius: 5px;
+        border: none;
+
+        margin-left: 3%;
+    }
+    input::placeholder {
+        padding-left: 10px;
+    }
+
+    .expiry_con {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+
+        #expireMM {
+            width: 249px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        #expireYY {
+            width: 249px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        select:nth-child(1){
+            margin-left: 6%;
+            
+        }
+        label:nth-child(1) {
+            width: 45%;
+        }
+    }
+    #cardnumber {
+        width: 527px;
+        height: 55.38px;
+    }
+
+    #cvc {
+        width: 89px;
+        height: 52px;
+    }
+    p {
+        margin-left: 4%;
+        color: $greyColor;
+        cursor: pointer;
+        width: 30%;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+    }
+    p:after {
+        content: "?";
+        border: 2px solid $greyColor;
+        padding: 0px 5px 0px 5px;
+        border-radius: 50%;
+        margin-left: 5px;
+    }
+    
+    
+}
+
+// REGISTER FORM
+#register_con {
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    background: $formColor;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+
+    padding: 2%;
+
+    h1{
+        font-family: $ProximaBold;
+        border-bottom: 3px solid $greyColor;
+        margin-right: 5%;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        padding-bottom: 10px;
+    }
+
+    label {
+        display: block;
+        font-family: $ProximaRegular;
+        margin: 3% 0 0 3%;
+    }
+    input {
+        background: $inputColor;
+        border-radius: 5px;
+        border: none;
+
+        margin-left: 3%;
+    }
+    input::placeholder {
+        padding-left: 10px;
+    }
+
+    .name_con {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        #firstname {
+            width: 249px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        #lastname {
+            width: 249px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        label:nth-child(1){
+            display: grid;
+            margin-left: 6%;
+        }
+        label:nth-child(2){
+            display: grid;
+        }
+    }
+    #mail {
+        width: 527px;
+        height: 55.38px;
+    }
+    #phone {
+        width: 364px;
+        height: 52px;
+    }
+    #phone:before {
+        content: "+45";
+        background: $mainGreen;
+        display: inline-block;
+        padding: 10px;
+    }
+    #country {
+        width: 370px;
+        height: 52px;
+    }
+    #submitBtn {
+        font-family: $ProximaBold;
+        font-weight: 700;
+        width: 202px;
+        height: 45px;
+        background: $mainGreen;
+        color: $buttonTextColor;
+        font-size: 24px;
+        line-height: normal;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+
+
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+
+        justify-self: center;
+        margin: 5%;
+
+        &:hover {
+            background: darken($mainGreen, 10%);
+        }
+        
+    }
+
+    h1 {
+        margin-left: 0.5em;
+    }
+    h1:last-of-type {
+        color: $greyColor;
+    }
+    .address_con {
+        display: flex;
+        flex-direction: row;
+
+        #address {
+            width: 350px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        #zip_code {
+            width: 150px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        label:nth-child(1){
+            display: grid;
+        }
+        label:nth-child(2){
+            display: grid;
+        }
+    }
+    .city_con {
+        display: flex;
+        flex-direction: row;
+
+        #city {
+            width: 250px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        #country {
+            width: 250px;
+            height: 52px;
+
+            margin-left: 0;
+        }
+        label:nth-child(1){
+            display: grid;
+        }
+        label:nth-child(2){
+            display: grid;
+        }
+    }
+
+}
+
+//PROGESS BAR
+.progress_wrapper {
+
+    display: grid;
+    grid-template-columns: 1fr minmax(100px, 1000px) 1fr;
+    grid-template-areas: ". bar .";
+
+.progress_container {
+    grid-area: bar;
+
+    width: 100%;
+    height: 10vw;
+
+    .progress_bar {
+        counter-reset: step;
+
+        li {
+            list-style-type: none;
+            float: left;
+            width: 50%;
+            position: relative;
+            text-align: center;
+            font-family: $ProximaBold;
+        }
+        li:before{
+            content: counter(step);
+            counter-increment: step;
+
+            width: 50px;
+            height: 50px;
+            line-height: 215%;
+            background: $mainGreen;
+            font-family: $ProximaBold;
+            color: #FFFFFF;
+            font-size: 1.5em;
+            border: 2px solid $mainGreen;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            border-radius: 5px;
+        }
+        li:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: $mainGreen;
+            top: 25px;
+            left: -50%;
+            z-index: -1;
+        }
+        li:first-child:after {
+            content: none;
+        }
+        li:last-child:before {
+            background: $greyColor;
+            border-color: $greyColor;
+        }
+    }
+}
+}

@@ -5,8 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>VOLT - CHECKOUT PAGE</title>
+    <link rel="stylesheet" href="style/_register.scss">
   </head>
   <body>
+
+    <div class="progress_wrapper">
+      <div class="progress_container">
+
+          <div class="progress_bar">
+            <li class="active_bar">Register</li>
+            <li>Payment</li>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="register_wrapper">
+        
+          <div class="register_container">
+          <form id="register_con">
+            <h1>Basic Information</h1>
+            <div class="name_con">
+            <label for="firstname">Firstname
+            <input type="text" name="firstname" id="firstname" placeholder="Firstname" required>
+          </label>
+            <label for="lastname">Lastname
+            <input type="text" name="lastname" id="lastname" placeholder="Lastname" required>
+          </label>
+            </div>
+    
+            <label for="mail">E-mail</label>
+            <input type="email" id="mail" name="mail" placeholder="name@example.com" required>
+    
+            <label for="phone">Phone number</label>
+            <input type="tel" name="phone" id="phone" placeholder="12 34 56 78" required>
+    
+            <label for="country">Country</label>
+            <input type='text' name="country" id="country" required>
+            <h1>Shipping Address</h1>
+            <div class="address_con">
+                <label for="address">Address
+                <input type="text" name="address" id="address" placeholder="Address" required>
+              </label>
+                <label for="zip_code">Zip code
+                <input type="text" name="zip_code" id="zip_code" placeholder="1234" required>
+              </label>
+                </div>
+                <div class="city_con">
+                    <label for="city">City
+                    <input type="text" name="city" id="city" placeholder="city" required>
+                  </label>
+                    <label for="country">Country
+                    <input type="text" name="country" id="country" placeholder="country" required>
+                  </label>
+                    </div>
+    
+            <input type="submit" id="submitBtn" value="Next">
+          </form>
+
+          <form id="payment_con">
+            <h1>Payment Method</h1>
+            <div class="Card_con">
+              <label>
+                <input type="radio" name="card">
+                <span class="card">CARD</span>
+              </label>
+              <label>
+                  <input type="radio" name="card">
+                  <span class="mpay">MPAY</span>
+                </label>
+                <label>
+                    <input type="radio" name="card">
+                    <span class="ppal">PPAL</span>
+                  </label>
+            </div>
+            <h1>Card information</h1>
+            <label for="cardnumber">Card Number *</label>
+            <input type="text" id="cardnumber" name="cardnumber" placeholder="name@example.com" required>
+            <div class="expiry_con">
+                <label for="expireMM">Expiry Date *
+                <select name='expireMM' id='expireMM'>
+                    <option value=''>Month</option>
+                    <option value='01'>January</option>
+                    <option value='02'>February</option>
+                    <option value='03'>March</option>
+                    <option value='04'>April</option>
+                    <option value='05'>May</option>
+                    <option value='06'>June</option>
+                    <option value='07'>July</option>
+                    <option value='08'>August</option>
+                    <option value='09'>September</option>
+                    <option value='10'>October</option>
+                    <option value='11'>November</option>
+                    <option value='12'>December</option>
+                </select> 
+              </label>
+              <label for="expireYY">
+                <select name='expireYY' id='expireYY'>
+                    <option class="year" value=''>Year</option>
+                    <option value='10'>2010</option>
+                    <option value='11'>2011</option>
+                    <option value='12'>2012</option>
+                </select> 
+              </label>
+                <input class="inputCard" type="hidden" name="expiry" id="expiry" maxlength="4"/>
+            </div>
+
+            <label for="cvc">CVC *</label>
+              <input type="text" name="cvc" id="cvc" placeholder="CVC">
+              <p>Need information</p>
+            
+    
+            <input type="submit" id="submitBtn" value="Confirm">
+          </form>
+
+          <div class="total_price_con row_1">
+              <div class="total_head">Total price</div>
+              <div class="calc_con">
+                <div class="subt_con">
+                  <div class="subt_t">Subtotal</div>
+                  <div class="subt_numb">379 DKK</div>
+                </div>
+                <div class="del_con">
+                  <div class="del_t">Delivery</div>
+                  <div class="del_numb">Free</div>
+                </div>
+              </div>
+              <div class="total_con">
+                <div class="total_t">Total price [+Taxes]</div>
+                <div class="total_numb">429 DKK</div>
+              </div>
+              <div class="details">
+                <div class="detail_head">Details</div>
+                <div class="detail_name_con">
+                  <div class="detail_name_text">Name:</div>
+                  <div class="detail_name_result">Jakob Falkenberg</div>
+                </div>
+                <div class="detail_email_con">
+                    <div class="detail_email_text">Email:</div>
+                    <div class="detail_email_result">JakobFalkenberg22@gmail.com</div>
+                  </div>
+                  <div class="detail_phone_con">
+                      <div class="detail_phone_text">Phone:</div>
+                      <div class="detail_phone_result">20662811</div>
+                    </div>
+                    <div class="detail_country_con">
+                        <div class="detail_country_text">Country:</div>
+                        <div class="detail_country_result">Denmark</div>
+                      </div>
+                    <div class="detail_shipping">Shipping to</div>
+                    <div class="shipping_address_con">
+                        <div class="shipping_address_text">Address:</div>
+                        <div class="shipping_address_result">CF Møllers Alle 68 7tv</div>
+                      </div>
+                      <div class="shipping_city_con">
+                          <div class="shipping_city_text">City:</div>
+                          <div class="shipping_city_result">Kbh S</div>
+                        </div>
+                        <div class="shipping_country_con">
+                            <div class="shipping_country_text">Country:</div>
+                            <div class="shipping_country_result">Denmark</div>
+                          </div>
+              </div>
+            </div>
+        </div>
+        </div>
+
     <script src="javascript/checkout.js"></script>
   </body>
 </html>
