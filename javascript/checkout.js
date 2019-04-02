@@ -1,6 +1,10 @@
-
+window.addEventListener("DOMContentLoaded", init);
 //GLOBALS
 let basicinfo = {};
+
+function init() {
+    showModal();
+}
 
 function post(customer) {
     
@@ -73,10 +77,9 @@ const confirmform = document.querySelector("#confirm_con");
    
    });
 
-
+    // VALIDATE SELECT ON PAYMENT FORM
     document.querySelector("#expireMM").addEventListener("change", function() {
 
-        console.log("works");
         document.querySelector("#expireMM").classList.add("outline_select");
 
     
@@ -84,10 +87,20 @@ const confirmform = document.querySelector("#confirm_con");
 
     document.querySelector("#expireYY").addEventListener("change", function() {
 
-        console.log("works");
         document.querySelector("#expireYY").classList.add("outline_select");
     
        });
+
+      
+    document.querySelector(".hide").addEventListener("click", function(){
+
+        document.querySelector(".modal").style.bottom = "-300px";
+
+    });   
+
+    function showModal() {
+        document.querySelector(".modal").style.bottom = "20px";
+    }
 
 
 
