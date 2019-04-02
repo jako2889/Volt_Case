@@ -27,6 +27,7 @@ function post(customer) {
 
 const registerform = document.querySelector("#register_con");
 const paymentform = document.querySelector("#payment_con");
+const confirmform = document.querySelector("#confirm_con");
 
  // Lav eventlistener på submit button og send data til post
  registerform.addEventListener("submit", event => {
@@ -53,6 +54,7 @@ const paymentform = document.querySelector("#payment_con");
     registerform.style.display = "none";
     paymentform.style.display = "grid";
     document.querySelector(".second_bar").classList.add("color_progress");
+    window.scrollTo(0, 0);
    
    });
 
@@ -63,7 +65,30 @@ const paymentform = document.querySelector("#payment_con");
     console.log("submitted");
    
     // display confirm form
+    paymentform.style.display = "none";
+    confirmform.style.display = "grid";
+    window.scrollTo(0, 0);
     // Post basic info to function post
     post(basicinfo);
    
    });
+
+
+    document.querySelector("#expireMM").addEventListener("change", function() {
+
+        console.log("works");
+        document.querySelector("#expireMM").classList.add("outline_select");
+
+    
+       });
+
+    document.querySelector("#expireYY").addEventListener("change", function() {
+
+        console.log("works");
+        document.querySelector("#expireYY").classList.add("outline_select");
+    
+       });
+
+
+
+   
