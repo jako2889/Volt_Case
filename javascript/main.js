@@ -10,6 +10,9 @@ let proj;
 function init() {
   console.log("init hej");
   getJson();
+
+  //Go To payment event
+  goToPayment();
 }
 
 //henter json fil fra WP url
@@ -69,6 +72,13 @@ function showModal(e) {
     document.querySelector(".modal_hover_wrap").style.display = "none";
   });
 }
+
+function goToPayment() {
+  document.querySelector(".but_con").addEventListener("click", function() {
+    window.location.href = "checkout.html";
+  });
+}
+
 //GET FUNCTION PRODUCT  DATA EITHER FROM DATABASE OR DIRECTLY FROM INPUT FX ITEM AMOUNT 1,2,3 VOLT CHARGERS
 
 //DISPLAY PRODUCTS -- IF WE USE DATABSE !!
