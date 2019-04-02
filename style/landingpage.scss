@@ -1,0 +1,214 @@
+@import "nav";
+@import "fonts";
+@import "colors";
+
+// VARIABLES
+$boxShadow: 10px 10px 20px rgba(0, 0, 0, 0.2), 0px 4px 10px rgba(0, 0, 0, 0.4);
+$borderRadius: 5px;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+
+.land_site_content_wrap {
+  width: 100%;
+  background-image: url(../images/roskilde.webp);
+  background-size: 100% 100%;
+  background-position-y: 30px;
+  background-color: black;
+
+  display: grid;
+  grid-template-columns: 1fr minmax(100px, 1000px) 1fr;
+  grid-template-areas: ". cont .";
+  padding-top: 70px;
+
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  .land_site_content_container {
+    grid-area: cont;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: "l r";
+
+    .col_1 {
+      background-color: #494949;
+      grid-area: l;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+    }
+    .col_2 {
+      background-color: white;
+      grid-area: r;
+      border-radius: $borderRadius;
+      box-shadow: $boxShadow;
+    }
+  }
+}
+
+.col_1 {
+  color: white;
+  padding: 30px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .col_1_head_1 {
+    color: #ee7203;
+    font-size: 2.4em;
+    text-align: right;
+  }
+  .col_1_head_2 {
+    font-size: 2.4em;
+    text-align: right;
+  }
+  .ros_logo_con {
+    padding: 10px;
+    margin: 60px 20px;
+  }
+  .offer_exp {
+    color: #ee7203;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+}
+
+.col_2 {
+  padding: 20px;
+
+  .depos {
+    margin-top: -30px;
+    margin-left: 35px;
+    font-size: 1.1em;
+    span {
+      font-weight: 900;
+    }
+  }
+}
+
+.price_con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: -30px;
+  & > * {
+  }
+
+  & :nth-child(2) > div:nth-child(1) {
+    text-decoration: line-through;
+    font-weight: 700;
+    color: gray;
+    padding-top: 120px;
+  }
+  & :nth-child(2) > div:nth-child(2) {
+    font-weight: 700;
+    color: black;
+    align-items: flex-end;
+  }
+  .price {
+    font-size: 11em;
+    font-weight: 900;
+    color: $mainGreen;
+    span {
+      font-size: 0.1em;
+      color: black;
+    }
+  }
+  .org_price {
+  }
+}
+
+.col_2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.info_wrap {
+  margin-top: 50px;
+  padding: 10px 40px;
+
+  .bat_con {
+    display: flex;
+
+    .bat_icon {
+      background-image: url(../images/bat.svg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      height: 70px;
+      width: 70px;
+    }
+    .bat_txt {
+      align-self: center;
+      font-size: 1.3em;
+      margin-left: 10px;
+      span {
+        font-weight: 900;
+      }
+    }
+  }
+  .swap_con {
+    display: flex;
+    margin: 20px 0px;
+
+    .swap_icon {
+      background-image: url(../images/swap.svg);
+      height: 70px;
+      width: 70px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .swap_txt {
+      align-self: center;
+      font-size: 1.3em;
+      margin-left: 10px;
+      span {
+        font-weight: 900;
+      }
+    }
+  }
+  .money_con {
+    display: flex;
+
+    .money_icon {
+      background-image: url(../images/moneyBack.svg);
+      height: 70px;
+      width: 70px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .money_txt {
+      align-self: center;
+      font-size: 1.3em;
+      margin-left: 10px;
+      padding-right: 20px;
+      span {
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.cta_con {
+  position: relative;
+
+  .cta {
+    position: absolute;
+    bottom: -10px;
+    left: 340px;
+    background-color: $mainGreen;
+    color: white;
+    font-weight: 900;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+    font-size: 3em;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
