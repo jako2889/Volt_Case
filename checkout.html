@@ -85,7 +85,10 @@
               </div>
     
             <label for="phone">Phone number</label>
-            <input type="tel" name="phone" id="phone" placeholder="12 34 56 78" required>
+            <input type="tel" name="phone" id="phone" placeholder="12 34 56 78" pattern="[0-9]+" required>
+            <div class="requirements_phone">
+                Must be a valid phone number.
+              </div>
     
             <label for="country">Country</label>
             <input type='text' name="country" id="country" placeholder="Country" required>
@@ -95,7 +98,7 @@
                 <input type="text" name="address" id="address" placeholder="Address" required>
               </label>
                 <label for="zip_code">Zip code
-                <input type="text" name="zip_code" id="zip_code" placeholder="1234" required>
+                <input type="text" name="zip_code" id="zip_code" placeholder="1234" pattern="[0-9]+" required>
               </label>
                 </div>
                 <div class="city_con">
@@ -128,7 +131,10 @@
             </div>
             <h1>Card information</h1>
             <label for="cardnumber">Card Number *</label>
-            <input type="text" id="cardnumber" name="cardnumber" placeholder="123 456 789" required>
+            <input type="text" id="cardnumber" name="cardnumber" placeholder="123 456 789" pattern="[0-9]+" required>
+            <div class="requirements_card">
+                Must be a valid card number.
+              </div>
             <div class="expiry_con">
                 <label for="expireMM">Expiry Date *
                 <select name='expireMM' id='expireMM'>
@@ -159,11 +165,26 @@
             </div>
 
             <label for="cvc">CVC *</label>
-              <input type="text" name="cvc" id="cvc" placeholder="CVC" required>
+              <input type="text" name="cvc" id="cvc" placeholder="CVC" pattern="[0-9]+" required>
+              <div class="requirements_cvc">
+                  Must be a valid cvc number.
+                </div>
               <p>Need information</p>
             
     
             <input type="submit" id="submitBtn" value="Confirm">
+          </form>
+
+          <form id="confirm_con">
+              <h1>Succes</h1>
+            <div class="succes_con">
+            <img src="images/check.png" alt="">
+            <p>Your payment is complete</p>
+            <h2>425 DKK</h2>
+            <p>We’ve send you a receipt to your email
+              Or you can click the button to get it now.</p>
+            <input type="submit" id="submitBtn" value="receipt">
+          </div>
           </form>
 
           <div class="total_price_con row_1">
@@ -218,6 +239,15 @@
         </div>
         </div>
 
+     <div class="modal">
+       <img src="images/Volt-Charger.png" alt="volt_logo">
+       <div class="content">
+         <h1>School Project</h1>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur possimus illo voluptatibus reiciendis.</p>
+       </div>
+       <div class="hide">+</div>
+     </div>
+        
     <script src="javascript/checkout.js"></script>
   </body>
 </html>
